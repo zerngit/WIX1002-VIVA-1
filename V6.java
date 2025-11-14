@@ -72,6 +72,11 @@ public class V6 {
                     
                     // Rule C: '0' and '1' are not valid in the scheme.
                     || arr[i].charAt(j) == '0' || arr[i].charAt(j) == '1'
+
+                    // Rule D: Only lowercase letters (a–z) and digits (2–9) are allowed.
+                    || 
+                        (arr[i].charAt(j) < 'a' || arr[i].charAt(j) > 'z')  &&
+                        (!isInt(arr[i].charAt(j)))
                 ) {
                     System.out.print("Invalid Log ");
                     invalid = true;
