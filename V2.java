@@ -22,29 +22,19 @@ public class V2 {
             int count_odd = 0;
             int count_even = 0;
             int count_zero = 0;
-            int digit;
-            int original_N = N;     //store the original number
+            int digit;     
 
             while(N!=0){   // Count lucky digit, L
                 digit = N % 10;
                 if(digit == L)
-                    count_L++;   
-                N = N / 10;
-            }
-
-            N = original_N; // Reset N to original value of N
-            
-            while(N!=0){  // Count odd, even, zero digits exclude L
-                digit = N % 10;
-                if(digit != L){
-                    if(digit == 0)
-                        count_zero++;
-                    else if(digit % 2 == 0)
-                        count_even++;
-                    else
-                        count_odd++;
-                }
-                N = N / 10;
+                    count_L++;  
+                else if(digit == 0)    // Count zero, even, odd digits exclude L
+                    count_zero++;
+                else if(digit % 2 == 0)
+                    count_even++;
+                else
+                    count_odd++;
+                N = N / 10; //update N
             }
             
             // Determine the signature based on count
@@ -57,6 +47,7 @@ public class V2 {
             else
                 results[i] = "NEUTRAL";
         }
+        
         //print signature for  inquiries
         for(int i=0; i<T; i++){
             System.out.println(results[i]);
