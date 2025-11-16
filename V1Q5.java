@@ -48,14 +48,9 @@ public class V1Q5 {
                         if(word.charAt(k)==vowels[j]){
                             index1 = index2;
                             index2 = k;
-                            System.out.println("index1 : " + index1);
-                            System.out.println("Index 2 : " + index2);
-                            System.out.println("k : " + k);
-                           
                             break;
                         }
                     }
-                    
                     
                     if (index2 -1 == index1){
                         System.out.println("Chaos");
