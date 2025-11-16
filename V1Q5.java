@@ -17,7 +17,7 @@ public class V1Q5 {
         Scanner sc = new Scanner(System.in);
         int T;
         do{
-            System.out.print("Enter an integer: ");
+            System.out.print("Enter number of words to test: ");
             T = sc.nextInt();
         }while (T<=1 || T>=100);
         
@@ -42,7 +42,6 @@ public class V1Q5 {
             if(status){
                 int index1 = -2;
                 int index2 = -2;
-                //boolean flag = true;
                 for(int k=0; k<word.length();k++){
                     for (int j = 0;j<vowels.length;j++){
                         if(word.charAt(k)==vowels[j]){
